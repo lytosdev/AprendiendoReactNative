@@ -10,12 +10,13 @@ const Ej2 = () => {
 			<Switch
 				trackColor={{ false: 'red', true: 'green' }}
 				thumbColor={isEnabled ? 'green' : 'red'}
-				onValueChange={() => setIsEnabled(!isEnabled)}
+				onValueChange={() => setIsEnabled(prevValue => !prevValue)}
 				value={isEnabled}
+				style={styles.switch}
 			/>
 			{
 				isEnabled
-					? <Image source={require('../img/react.svg')} style={styles.image}></Image>
+					? <Image source={require('../img/react.png')} style={styles.image}></Image>
 					: null
 			}
 		</View>
@@ -26,10 +27,14 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1
 	},
+	switch: {
+		margin: 20
+	},
 	image: {
 		width: 150,
 		height: 150,
-		alignSelf: "center"
+		alignSelf: "center",
+		marginTop: 40
 	}
 })
 
