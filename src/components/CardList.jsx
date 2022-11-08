@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Text, View, Button, ActivityIndicator, TextInput, FlatList, StyleSheet } from 'react-native'
 import Card from './Card'
+import StyledButton from './StyledButton'
 
 const CardList = () => {
   const [data, setData] = useState()
@@ -34,12 +35,8 @@ const CardList = () => {
           <Text style={{ fontWeight: 'bold', alignSelf: 'center', margin: 10 }}>Página {page}/149</Text>
 
           <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
-            <View style={{ width: 120, margin: 5 }}>
-              <Button onPress={() => page > 1 && setPage(page - 1)} title="Anterior" />
-            </View>
-            <View style={{ width: 120, margin: 5 }}>
-              <Button onPress={() => page < 149 && setPage(page + 1)} title="Siguiente" />
-            </View>
+            <StyledButton onPress={() => page > 1 && setPage(page - 1)} buttonStyle={styles.button}>Anterior</StyledButton>
+            <StyledButton onPress={() => page < 149 && setPage(page + 1)} buttonStyle={styles.button}>Siguiente</StyledButton>
           </View></>)}
 
     </>
@@ -53,6 +50,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 6,
     borderColor: "gray"
+  },
+  button: {
+    width: 120
   }
 })
 

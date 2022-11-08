@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { TextInput, Text, Button, View, StyleSheet } from 'react-native'
+import StyledButton from './StyledButton'
 
 const Ej1 = () => {
   const values = [
@@ -33,9 +34,7 @@ const Ej1 = () => {
       <TextInput placeholder="Ingresa una edad" onChangeText={checkAge} style={styles.input} />
       <Text style={styles.error}>{error}</Text>
       <Text style={[styles.text, { color: obj.color }]}>{obj.text}</Text>
-      <View style={styles.button}>
-        <Button title="Finalizar" onPress={() => !error && printText()} />
-      </View>
+      <StyledButton onPress={() => !error && printText()} buttonStyle={styles.button}>Finalizar</StyledButton>
     </View>
   )
 }
@@ -65,6 +64,7 @@ const styles = StyleSheet.create({
     color: 'red'
   },
   button: {
+    width: 150,
     marginVertical: 10
   }
 })

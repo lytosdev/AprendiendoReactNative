@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react"
 import { View, Text, StyleSheet } from "react-native"
-import { Link, useParams } from "react-router-native"
-
+import { useParams } from "react-router-native"
+import StyledLink from "./StyledLink"
 import CardList from "./CardList"
 import Ej1 from "./Ej1"
+import Ej2 from "./Ej2"
 
 const components = [
   { key: "cardlist", value: <CardList /> },
-  { key: "ej1", value: <Ej1 /> }
+  { key: "ej1", value: <Ej1 /> },
+  { key: "ej2", value: <Ej2 /> }
 ]
 
 const Screens = () => {
@@ -23,9 +25,7 @@ const Screens = () => {
   return (
     <View style={styles.container}>
       <View style={styles.topBar}>
-        <Link to="/" style={styles.button}>
-          <Text style={styles.textButton}>Volver</Text>
-        </Link>
+        <StyledLink to="/" buttonStyle={styles.button}>Volver</StyledLink>
         <Text style={styles.title}>{title}</Text>
       </View>
       {component}
@@ -45,17 +45,9 @@ const styles = StyleSheet.create({
   button: {
     width: 80,
     height: 35,
-    borderRadius: 10,
     backgroundColor: "green",
     marginHorizontal: 10,
     marginVertical: 10
-  },
-  textButton: {
-    fontWeight: "bold",
-    textAlign: "center",
-    textAlignVertical: "center",
-    height: "100%",
-    color: "white"
   },
   title: {
     fontWeight: "bold",

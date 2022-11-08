@@ -1,42 +1,16 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import { Link } from 'react-router-native'
+import StyledLink from './StyledLink'
 
 const Menu = () => {
   return (
     <>
       <Text style={styles.title}>Bienvenido a la App de pruebas y ejercicios</Text>
       <View style={styles.container}>
-        <Link to="/screens/API de Disney/cardlist" style={styles.button}>
-          <Text style={styles.textButton}>API</Text>
-        </Link>
-        <Link to="/screens/Ejercicio1/ej1" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 1</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 2</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 3</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 4</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 5</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 6</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 7</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 8</Text>
-        </Link>
-        <Link to="/screens/Ejercicio/nulo" style={styles.button}>
-          <Text style={styles.textButton}>Ejer 9</Text>
-        </Link>
+        <StyledLink to="/screens/API de Disney/cardlist" buttonStyle={styles.button}>API</StyledLink>
+        <StyledLink to="/screens/Ejercicio 1/ej1" buttonStyle={styles.button}>Ejercicio 1</StyledLink>
+        <StyledLink to="/screens/Ejercicio 2/ej2" buttonStyle={styles.button}>Ejercicio 2</StyledLink>
+        <StyledLink to="/screens/Ejercicio 3/null" buttonStyle={styles.button}>Ejercicio 3</StyledLink>
       </View>
     </>
   )
@@ -45,9 +19,7 @@ const Menu = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center"
+    alignItems: "center"
   },
   title: {
     fontSize: 16,
@@ -56,18 +28,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   button: {
-    width: 50,
-    height: 50,
-    margin: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "blue"
-  },
-  textButton: {
-    fontWeight: "bold",
-    textAlign: "center",
-    textAlignVertical: "center",
-    height: "100%"
+    width: "80%"
   }
 })
 

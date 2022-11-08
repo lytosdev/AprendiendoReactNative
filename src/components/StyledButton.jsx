@@ -1,19 +1,18 @@
-import { Text, StyleSheet } from 'react-native'
-import { Link } from 'react-router-native'
+import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-const StyledLink = ({ to, buttonStyle, textStyle, children }) => {
+const StyledButton = ({ buttonStyle, textStyle, children, ...restProps }) => {
 
   return (
-    <Link to={to} style={[styles.button, buttonStyle]}>
+    <TouchableOpacity {...restProps} style={[styles.button, buttonStyle]}>
       <Text style={[styles.textButton, textStyle]}>{children}</Text>
-    </Link>
+    </TouchableOpacity>
   )
 }
 
 const styles = StyleSheet.create({
   button: {
     width: "100%",
-    height: 50,
+    height: 40,
     margin: 5,
     borderRadius: 10,
     backgroundColor: "#154360",
@@ -28,4 +27,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default StyledLink
+export default StyledButton
