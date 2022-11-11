@@ -115,6 +115,7 @@ const Ej3 = () => {
 					onChangeText={checkAge}
 					value={form.age}
 					error={errors.age}
+					keyboardType="numeric"
 					styleContainer={styles.fieldValue} />
 			</View>
 
@@ -122,7 +123,8 @@ const Ej3 = () => {
 				<Text style={styles.fieldKey}>Email</Text>
 				<StyledInput
 					placeholder="Introduzca su email"
-					onChangeText={checkEmail} value={form.email} error={errors.email} styleContainer={styles.fieldValue} />
+					onChangeText={checkEmail} value={form.email} error={errors.email} styleContainer={styles.fieldValue}
+					keyboardType="email-address" />
 			</View>
 
 			<View style={styles.field}>
