@@ -168,7 +168,8 @@ const styles = StyleSheet.create({
 		alignItems: "center"
 	},
 	fieldKey: {
-		flex: 1
+		flex: 1,
+		color: "black"
 	},
 	fieldValue: {
 		flex: 2
