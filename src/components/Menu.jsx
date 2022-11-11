@@ -10,7 +10,7 @@ const Menu = () => {
         <StyledLink to="/screens/API de Disney/cardlist" buttonStyle={styles.button}>API</StyledLink>
         <StyledLink to="/screens/Ejercicio 1/ej1" buttonStyle={styles.button}>Ejercicio 1</StyledLink>
         <StyledLink to="/screens/Ejercicio 2/ej2" buttonStyle={styles.button}>Ejercicio 2</StyledLink>
-        <StyledLink to="/screens/Ejercicio 3/null" buttonStyle={styles.button}>Ejercicio 3</StyledLink>
+        <StyledLink to="/screens/Ejercicio 3/ej3" buttonStyle={styles.button}>Ejercicio 3</StyledLink>
       </View>
     </>
   )

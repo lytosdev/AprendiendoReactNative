@@ -5,11 +5,13 @@ import StyledLink from "./StyledLink"
 import CardList from "./CardList"
 import Ej1 from "./Ej1"
 import Ej2 from "./Ej2"
+import Ej3 from "./Ej3"
 
 const components = [
   { key: "cardlist", value: <CardList /> },
   { key: "ej1", value: <Ej1 /> },
-  { key: "ej2", value: <Ej2 /> }
+  { key: "ej2", value: <Ej2 /> },
+  { key: "ej3", value: <Ej3 /> }
 ]
 
 const Screens = () => {
