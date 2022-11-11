@@ -30,7 +30,7 @@ const Ej3 = () => {
 
 		let error
 		// Edad de 1 hasta 127 años
-		const regEx = /^[1-9]|[1-9][0-9]|1[01][0-9]|12[0-7]$/
+		const regEx = /^([1-9]|[1-9][0-9]|1[01][0-9]|12[0-7])$/
 
 		if (!value) {
 			error = { age: "La edad es requerida" }
