@@ -22,7 +22,8 @@ const CardList = () => {
 
       {!data
         ? <View style={{ flex: 1, justifyContent: 'center' }}><ActivityIndicator size="large" color="blue" /></View>
-        : <><TextInput placeholder="Filtrar" style={styles.filter} onChangeText={value => setFilter(value)} value={filter} />
+        : <>
+          <TextInput placeholder="Filtrar" style={styles.filter} onChangeText={value => setFilter(value)} value={filter} />
           <FlatList
             data={data.filter(obj => obj.name.toLowerCase().includes(filter.toLowerCase()))}
             renderItem={({ item: obj }) => <Card key={obj._id} name={obj.name} imageUrl={obj.imageUrl}></Card>}
@@ -33,11 +34,11 @@ const CardList = () => {
         ? ''
         : (<>
           <Text style={{ fontWeight: 'bold', alignSelf: 'center', margin: 10 }}>Página {page}/149</Text>
-
-          <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
-            <StyledButton onPress={() => page > 1 && setPage(page - 1)} buttonStyle={styles.button}>Anterior</StyledButton>
-            <StyledButton onPress={() => page < 149 && setPage(page + 1)} buttonStyle={styles.button}>Siguiente</StyledButton>
-          </View></>)}
+          <View style={styles.buttonContainer}>
+            <StyledButton onPress={() => page > 1 && setPage(page - 1)} style={styles.button}>Anterior</StyledButton>
+            <StyledButton onPress={() => page < 149 && setPage(page + 1)} style={styles.button}>Siguiente</StyledButton>
+          </View>
+        </>)}
 
     </>
   )
@@ -50,6 +51,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 6,
     borderColor: "gray"
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: "space-evenly",
+    marginBottom: 5
   },
   button: {
     width: 120

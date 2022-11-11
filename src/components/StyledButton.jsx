@@ -1,9 +1,9 @@
 import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-const StyledButton = ({ buttonStyle, textStyle, children, ...restProps }) => {
+const StyledButton = ({ disable, style, textStyle, children, ...restProps }) => {
 
   return (
-    <TouchableOpacity {...restProps} style={[styles.button, buttonStyle]}>
+    <TouchableOpacity disabled={disable} style={[styles.button, disable && { opacity: 0.7 }, style]} {...restProps}>
       <Text style={[styles.textButton, textStyle]}>{children}</Text>
     </TouchableOpacity>
   )
@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     height: 40,
-    margin: 5,
     borderRadius: 10,
     backgroundColor: "#154360",
     elevation: 10

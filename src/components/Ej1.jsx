@@ -34,7 +34,7 @@ const Ej1 = () => {
       <TextInput placeholder="Ingresa una edad" onChangeText={checkAge} style={styles.input} />
       <Text style={styles.error}>{error}</Text>
       <Text style={[styles.text, { color: obj.color }]}>{obj.text}</Text>
-      <StyledButton onPress={() => !error && printText()} buttonStyle={styles.button}>Finalizar</StyledButton>
+      <StyledButton onPress={() => !error && printText()} style={styles.button}>Finalizar</StyledButton>
     </View>
   )
 }
