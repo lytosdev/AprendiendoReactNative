@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     height: 50,
     margin: 5,
     borderRadius: 10,
-    backgroundColor: "#154360",
+    backgroundColor: "#4F9DD1",
     elevation: 10
   },
   textButton: {
