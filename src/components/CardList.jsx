@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Text, View, Button, ActivityIndicator, TextInput, FlatList, StyleSheet } from 'react-native'
+import { Text, View, ActivityIndicator, TextInput, FlatList, StyleSheet } from 'react-native'
 import Card from './Card'
 import StyledButton from './StyledButton'
 
