@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { TextInput, Text, Button, View, StyleSheet } from 'react-native'
+import { TextInput, Text, View, StyleSheet } from 'react-native'
 import StyledButton from './StyledButton'
 
 const Ej1 = () => {

@@ -1,6 +1,6 @@
 import React from "react"
-import { View, Text } from 'react-native'
-import { Route, Redirect, NativeRouter, Routes } from 'react-router-native'
+import { View } from 'react-native'
+import { Route, Routes } from 'react-router-native'
 
 import Menu from "./components/Menu"
 import Screens from "./components/Screens"
