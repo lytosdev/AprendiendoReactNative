@@ -11,6 +11,7 @@ const Menu = () => {
         <StyledLink to="/screens/Ejercicio 2/ej2" buttonStyle={styles.button}>Ejercicio 2</StyledLink>
         <StyledLink to="/screens/Ejercicio 3/ej3" buttonStyle={styles.button}>Ejercicio 3</StyledLink>
         <StyledLink to="/screens/Ejercicio 4/ej4" buttonStyle={styles.button}>Ejercicio 4</StyledLink>
+        <StyledLink to="/screens/Ejercicio 5/ej5" buttonStyle={styles.button}>Ejercicio 5</StyledLink>
       </View>
     </>
   )
